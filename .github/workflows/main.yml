@@ -22,9 +22,10 @@ jobs:
           gradle-version: '8.8'
 
       - run: gradle build
+        working-directory: extra-reach
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: extra-reach-mod
-          path: build/libs/extra-reach-1.0.0.jar
+          path: extra-reach/build/libs/extra-reach-1.0.0.jar
